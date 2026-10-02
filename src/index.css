@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary-green: #369807;
+    --gold: #e1c718;
+    --black: #000000;
+    --white: #FFFFFF;
+    --teal: #34e0b3;
+    --font-pixel: 'Press Start 2P', monospace, cursive;
+    --font-mono: 'Space Mono', monospace;
+    --font-sans: 'Noto Sans KR', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+}
+
+.font-pixel {
+  font-family: var(--font-pixel);
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+}
+
+.font-sans-kr {
+  font-family: var(--font-sans);
+}
+
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.toast-enter {
+  animation: slideDownFade 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
